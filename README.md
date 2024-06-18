@@ -10,7 +10,7 @@ Para instalar e configurar o projeto localmente, siga estas etapas:
 1. Certifique-se de ter o Node.js instalado em sua máquina.
 2. Clone o repositório do projeto:
 ```bash
-git https://github.com/EmersonMatias/front-end-paggo
+git https://github.com/EmersonMatias/back-end-paggo
 ```
 3. Navegue até o diretório do projeto:
 ```bash
@@ -23,7 +23,7 @@ cd npm i
 ## Como Usar
 
 ### Variáveis de Ambiente
-Após instalar o projeto e suas dependências, precisamos configurar as variáveis de ambiente:
+Após instalar o projeto e suas dependências, precisamos configurar as variáveis de ambiente no arquivo .env:
 
 * Variáveis de ambiente da AWS, que podemos encontrar na parte de credênciais de segurança na seção chave de acesso.
 
@@ -32,6 +32,14 @@ Após instalar o projeto e suas dependências, precisamos configurar as variáve
 * Copiar do bucket a baseURL e adicionar na variável de ambiente.
 
 * URL de conexão externa com o banco postgresql
+
+### Iniciando o banco de dados
+
+* Para criar as tabelas no banco de dados rode o comando:
+```bash
+npx prisma migrate dev --name nome_da_migration
+```
+
 ### Iniciando o projeto
 
 * Para iniciar o servidor de desenvolvimento:
